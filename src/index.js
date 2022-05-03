@@ -68,3 +68,14 @@ var numbers = [3, 56, 2, 48, 5];
 //   return num > 10;
 // })
 // console.log(newNumber);
+
+//CHALLENGE -- Import emojipedia and use the above as well as JS .substring() to print only the "meanings" as well as only the first 100 characters of the "meanings". Should look like:
+//[""You can do that!" or "I feel strong!" Are with tense biceps. Also used in connection with doing spo", "Two hands pressed together. Is currently very introverted, saying a prayer, or hoping for enlightenm", "This is funny! A smiley face, rolling on the floor, laughing. The face is laughing boundlessly. The "]
+import emojipedia from "./emojipedia";
+
+// console.log(emojipedia);
+
+var meanings = emojipedia.map(function (emojiEntry) {
+  return emojiEntry.meaning.substring(0, 100);
+});
+console.log(meanings);
